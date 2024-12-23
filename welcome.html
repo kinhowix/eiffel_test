@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./assets/imagens/favicon.ico" type="image/x-icon">
+  <title>Pagina Inicial</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    :root{
+    --cor1-color:#191673;
+    --cor2-color:#4B498C;
+    --cor3-color:#9795BF;
+    --cor4-color:#C0BFD9;
+    --cor5-color:#E9E9F2;
+  }
+  img.fixed {  
+      position: fixed;  
+      width: 50%;  
+      top: 0; /* Alinha no topo da página */  
+      left: 28%; /* Alinha à esquerda da página */  
+      z-index: -1; /* Coloca a imagem atrás dos outros elementos */  
+    }  
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+     
+    }
+
+    body > img{
+      
+  width: 100%;
+    
+ }
+    h1{
+      color: white;
+margin-left: 28px;
+    }
+
+    p{
+      position: static;
+      margin-top: 53%;
+      margin-left: 20%;
+      font-size: larger;
+      font-weight: bold;
+      color:var(--cor1-color);
+
+
+    }
+
+    nav {
+    font-weight: bold;
+    width: 340px;
+    background-color: var(--cor1-color);
+    color: white;
+    height: 100vh;
+    max-height: 100vh; /* Limita o tamanho máximo do menu */
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    overflow-y: auto; /* Adiciona a barra de rolagem vertical */
+    scrollbar-width: thin; /* Opcional: estiliza a largura da barra de rolagem no Firefox */
+}
+
+
+    .b {
+      width: 340px;
+      margin-left: 76%;
+      background-color: var(--cor1-color);
+      color: white;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 20px;
+}
+
+    nav img {
+      width: 250px;
+      margin-bottom: 20px;
+    }
+
+    nav a {
+      color:white;
+      padding: 15px 0 15px 40px;
+      text-decoration: none;
+      display: block;
+      width: 100%;
+      text-align: left;
+    }
+
+    nav a:hover {
+      background-color: var(--cor3-color);
+    }
+
+    .submenu {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .submenu a {
+      font-weight: bold;
+      color: var(--cor1-color);
+      padding: 10px 0 10px 40px;
+      font-size: 1em;
+      background-color: var(--cor3-color);
+      text-align: left;
+    }
+
+    .submenu a:hover {
+      background-color: var(--cor5-color);
+    }
+
+    main {
+      margin-left: 300px;
+      padding: 20px;
+      flex-grow: 1;
+    }
+
+    body{
+background-color: var(--cor3-color);
+
+    }
+
+    /* Responsividade */
+@media (max-width: 600px) {
+  
+  
+  body {
+      width: 600px;
+  }
+
+  body> img {
+    width: 500px;
+}
+
+nav{
+
+  width: 150px;
+}
+
+}
+
+  </style>
+</head>
+
+<body>
+
+
+  <nav>
+    <img src="./assets/imagens/Logo.png" alt="Logo">    
+    <a href="#orcamentos" id="orcamento-link">Orçamento</a>
+    <div class="submenu" id="orcamento-submenu">
+      <a href="orcar.php"> - Fazer um Novo Orçamento</a>
+      <a href="lista_orcamentos.php"> - Buscar Orçamento</a>
+      <a href="orcar_avulso_p1.php">- Orçamento Avulso P1</a>
+      <a href="orcar_avulso_p2.php">- Orçamento Avulso P2</a>
+    </div>
+    <a href="#lentes" id="lentes-link">Lentes</a>
+    <div class="submenu" id="lentes-submenu">
+      <a href="cadastrar_lentes.php"> - Cadastrar nova lente</a>
+      <a href="pesquisar_lentes.php"> - Pesquisar preço de lentes</a>
+      <a href="atualiza_preco_lentes.php"> - Atualizar preço das lentes</a>
+    </div>
+    <a href="#servicos" id="servicos-link">Serviços</a>
+    <div class="submenu" id="servicos-submenu">
+      <a href="servico_p1.php"> - Cadastrar serviço P1</a>
+      <a href="servico_p2.php"> - Cadastrar serviço P2</a>
+      <a href="lista_servicos.php"> - Editar Serviços</a>
+      <a href="insercao_relatorios_lojas.php"> - Cadastrar serviços das lojas</a>
+    </div>
+    <a href="#lista-precos" id="lista-precos-link">Lista/Preços</a>
+    <div class="submenu" id="lista-precos-submenu">
+      <a href="listar_preco_servicos.php"> - Listar os preços dos Serviços</a>
+      <a href="pesquisar_preco_servico.php"> - Pesquisar os Preços dos serviços</a>
+      <a href="inserir_preco_servicos.php"> - Inserir preço de serviços</a>
+    </div>
+    <a href="formulario.php">Editar Imagens</a>
+    <a href="logout.php">Sair</a>
+  </nav>
+
+  <img src="./assets/imagens/body.png" alt="Foto_menu" class="fixed">  
+
+  <div class="b"></div>
+  <main>
+    
+    
+  </main>
+  <script>
+    document.getElementById('orcamento-link').addEventListener('click', function () {
+      var submenu = document.getElementById('orcamento-submenu');
+      if (submenu.style.display === 'none' || submenu.style.display === '') {
+        submenu.style.display = 'flex';
+      } else {
+        submenu.style.display = 'none';
+      }
+    });
+
+    document.getElementById('lentes-link').addEventListener('click', function () {
+      var submenu = document.getElementById('lentes-submenu');
+      if (submenu.style.display === 'none' || submenu.style.display === '') {
+        submenu.style.display = 'flex';
+      } else {
+        submenu.style.display = 'none';
+      }
+    });
+
+    document.getElementById('servicos-link').addEventListener('click', function () {
+      var submenu = document.getElementById('servicos-submenu');
+      if (submenu.style.display === 'none' || submenu.style.display === '') {
+        submenu.style.display = 'flex';
+      } else {
+        submenu.style.display = 'none';
+      }
+    });
+
+    document.getElementById('lista-precos-link').addEventListener('click', function () {
+      var submenu = document.getElementById('lista-precos-submenu');
+      if (submenu.style.display === 'none' || submenu.style.display === '') {
+        submenu.style.display = 'flex';
+      } else {
+        submenu.style.display = 'none';
+      }
+    });
+  </script>
+  </script>
+</body>
+
+</html>
